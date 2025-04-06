@@ -3,6 +3,8 @@ import SnapKit
 
 class ProductViewController: UIViewController {
     
+    // MARK: - UI Elements
+    
     private let sizes = ["XXS", "XS", "S", "M", "L", "XL"]
     private var selectedSize: String?
     
@@ -14,7 +16,7 @@ class ProductViewController: UIViewController {
     
     private lazy var productImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "LoafersImage") // Убедись, что у тебя есть изображение в Assets
+        imageView.image = UIImage(named: "LoafersImage")
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -98,6 +100,8 @@ class ProductViewController: UIViewController {
         configureUI()
         bind(sizes: sizes)
     }
+    
+    // MARK: - Configure UI
     
     private func configureUI() {
         

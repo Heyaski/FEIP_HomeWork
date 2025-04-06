@@ -20,6 +20,8 @@ class SizeEntityView: UIView {
     
     private var size: String?
     
+    // MARK: - UI Elements
+    
     private lazy var containerView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 20
@@ -58,6 +60,8 @@ class SizeEntityView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Configure UI
     
     private func configureUI() {
         addSubview(containerView)
