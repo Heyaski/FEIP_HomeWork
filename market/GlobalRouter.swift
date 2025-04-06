@@ -1,8 +1,24 @@
 //
 //  GlobalRouter.swift
-//  market
+//  clothes_shop
 //
-//  Created by Степан on 19.03.2025.
+//  Created by anastasiia talmazan on 2025-03-05.
 //
 
-import Foundation
+import UIKit
+
+final class GlobalRouter {
+    
+    static let instance = GlobalRouter()
+    
+    weak var window: UIWindow?
+    
+    private init() {}
+ 
+    func setMain() {
+        let mainVC = ProductViewController()
+            
+        window?.rootViewController = mainVC
+        window?.makeKeyAndVisible()
+    }
+}
